@@ -1,46 +1,50 @@
+"""
+main.py – Entry point Aplikasi SiAbsen
+"""
 import tkinter as tk
+import sys
+import os
+
+# Tambah path agar import relatif berjalan
+BASE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, BASE)
 
 from database import init_database, insert_default_data
-from views.view_login import LoginView
-from views.view_mahasiswa_dashboard import MahasiswaDashboard
-from views.view_dosen_dashboard import DosenDashboard
+from view.view_login import LoginView
+from view.view_mahasiswa_dashboard import MahasiswaDashboard
+from view.view_dosen_dashboard import DosenDashboard
 
 
 class AbsensiApp:
-    """Main Application"""
+    """Main Application Controller"""
 
     def __init__(self):
         self.root = tk.Tk()
-        self.root.resizable(False, False)
+        self.root.resizable(True, True)
 
-        # Initialize database
+        # Inisialisasi database
         init_database()
         insert_default_data()
 
-        # Start with login
+        # Mulai dari login
         self.show_login()
 
     def show_login(self):
-        """Show login view"""
-        self.clear_window()
+        self._clear()
         LoginView(self.root, self.on_login_success)
 
     def on_login_success(self, user):
-        """Called when login is successful"""
-        self.clear_window()
-
+        self._clear()
         if user['role'] == 'mahasiswa':
             MahasiswaDashboard(self.root, user, self.show_login)
         elif user['role'] == 'dosen':
             DosenDashboard(self.root, user, self.show_login)
 
-    def clear_window(self):
-        """Clear window widgets"""
-        for widget in self.root.winfo_children():
-            widget.destroy()
+    def _clear(self):
+        for w in self.root.winfo_children():
+            w.destroy()
 
     def run(self):
-        """Run the application"""
         self.root.mainloop()
 
 
