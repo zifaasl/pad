@@ -1,7 +1,6 @@
 # SiAbsen – Sistem Informasi Absensi Akademik
 
 ## Nama : Adilah Nazifah Salamah
-<br>
 ## NIM : 23250018
 
 ---
