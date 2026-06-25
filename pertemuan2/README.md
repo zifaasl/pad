@@ -1,9 +1,10 @@
-### SiAbsen – Sistem Informasi Absensi Akademik
+# 🎓 SiAbsen – Sistem Informasi Absensi Akademik
+Nama : Adilah Nazifah Salamah
+NIM : 23250018
 
-Aplikasi desktop absensi akademik berbasis Python dengan **multi-role login** (Dosen & Mahasiswa) dan tampilan modern dark-theme.
 ---
 
-### Struktur Proyek
+## 📁 Struktur Proyek
 
 ```
 absensi_app/
@@ -18,80 +19,16 @@ absensi_app/
     └── view_dosen_dashboard.py      ← Dashboard dosen
 ```
 
-### Akun Default
-
-| Role       | Username     | Password |
-|------------|-------------|----------|
-| Dosen      | dosen1      | 123456   |
-| Dosen      | dosen2      | 123456   |
-| Mahasiswa  | mahasiswa1  | 123456   |
-| Mahasiswa  | mahasiswa2  | 123456   |
-| Mahasiswa  | mahasiswa3  | 123456   |
-| Mahasiswa  | mahasiswa4  | 123456   |
 ---
 
-### Fitur
+## 🚀 Cara Menjalankan
 
-## Mahasiswa
-- Login aman dengan hash password (SHA-256)
-- **Beranda** – ringkasan statistik kehadiran & bar persentase
-- **Absen Hari Ini** – absen masuk & pulang dengan jam real-time
-- **Riwayat Absensi** – tabel 30 hari terakhir
-- **Profil** – informasi akun
+### 1. Install Python (≥ 3.8)
+Tkinter sudah termasuk bawaan Python. Tidak ada dependensi tambahan.
 
-## Dosen
-- **Beranda** – ringkasan total kehadiran kelas
-- **Rekap Absensi** – seluruh data absensi mahasiswa
-- **Data Mahasiswa** – tabel daftar mahasiswa
-- **Input Manual** – ubah/tambah absensi mahasiswa
-- **Profil** – informasi akun dosen
----
-
-### Skema Database
-
-## Tabel `users`
-| Kolom       | Tipe    | Keterangan               |
-|-------------|---------|--------------------------|
-| id          | INTEGER | Primary key autoincrement |
-| username    | TEXT    | Unique login name        |
-| password    | TEXT    | SHA-256 hash             |
-| role        | TEXT    | 'dosen' atau 'mahasiswa' |
-| nama        | TEXT    | Nama lengkap             |
-| nim_nip     | TEXT    | NIM/NIP                  |
-| prodi       | TEXT    | Program studi            |
-| created_at  | TIMESTAMP | Waktu dibuat            |
-
-## Tabel `absensi`
-| Kolom       | Tipe    | Keterangan               |
-|-------------|---------|--------------------------|
-| id          | INTEGER | Primary key              |
-| user_id     | INTEGER | FK → users.id            |
-| tanggal     | DATE    | Tanggal absensi          |
-| jam_masuk   | TEXT    | Jam masuk (HH:MM)        |
-| jam_pulang  | TEXT    | Jam pulang (HH:MM)       |
-| status      | TEXT    | hadir/izin/sakit/alpha   |
-| keterangan  | TEXT    | Catatan tambahan         |
-
-## Tabel `mata_kuliah`
-| Kolom    | Tipe    | Keterangan     |
-|----------|---------|----------------|
-| id       | INTEGER | Primary key    |
-| kode     | TEXT    | Kode MK        |
-| nama     | TEXT    | Nama MK        |
-| sks      | INTEGER | Jumlah SKS     |
-| dosen_id | INTEGER | FK → users.id  |
+### 2. Jalankan aplikasi
+```bash
+python main.py
+```
 
 ---
-
-## Keamanan
-- Password di-hash menggunakan **SHA-256** sebelum disimpan
-- Tidak ada password plaintext di database
-- Role check dilakukan di layer controller
-
----
-
-## Tech Stack
-- **Python 3.8+**
-- **Tkinter** – GUI bawaan Python
-- **SQLite3** – Database lokal bawaan Python
-- **hashlib** – Hashing password

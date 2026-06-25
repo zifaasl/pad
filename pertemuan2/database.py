@@ -73,10 +73,10 @@ def insert_default_data():
             users = [
                 ('dosen1', hash_password('123456'), 'dosen', 'M. Reza Fahlevi', 'NIP-198001012010011001', 'Teknik Informatika'),
                 ('dosen2', hash_password('123456'), 'dosen', 'Sry Dhina Pohan, S.Kom.,M.Kom.', 'NIP-197505152005012002', 'Sistem Informasi'),
-                ('mahasiswa1', hash_password('123456'), 'mahasiswa', 'Adilah Nazifah Salamah', '2023010001', 'Teknik Informatika'),
-                ('mahasiswa2', hash_password('123456'), 'mahasiswa', 'Paramadina Mulya', '2023010002', 'Teknik Informatika'),
-                ('mahasiswa3', hash_password('123456'), 'mahasiswa', 'Rahma Aulia', '2023010003', 'Sistem Informasi'),
-                ('mahasiswa4', hash_password('123456'), 'mahasiswa', 'Setiawati', '2023010004', 'Sistem Informasi'),
+                ('mahasiswa1', hash_password('123456'), 'mahasiswa', 'Mufti Atik', '2023010001', 'Teknik Informatika'),
+                ('mahasiswa2', hash_password('123456'), 'mahasiswa', 'Almaidah', '2023010002', 'Teknik Informatika'),
+                ('mahasiswa3', hash_password('123456'), 'mahasiswa', 'Adilah Nazifah Salamah', '2023010003', 'Sistem Informasi'),
+                ('mahasiswa4', hash_password('123456'), 'mahasiswa', 'Paramadina Mulya', '2023010004', 'Sistem Informasi'),
             ]
             cursor.executemany(
                 'INSERT INTO users (username, password, role, nama, nim_nip, prodi) VALUES (?,?,?,?,?,?)',
