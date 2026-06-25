@@ -1,27 +1,12 @@
-# 🎓 SiAbsen – Sistem Informasi Absensi Akademik
-Nama : Adilah Nazifah Salamah
-NIM : 23250018
+# SiAbsen – Sistem Informasi Absensi Akademik
+
+## Nama : Adilah Nazifah Salamah
+<br>
+## NIM : 23250018
 
 ---
 
-## 📁 Struktur Proyek
-
-```
-absensi_app/
-├── main.py                          ← Entry point
-├── database.py                      ← Fungsi database SQLite
-├── theme.py                         ← Konstanta warna & font
-├── widgets.py                       ← Komponen UI reusable
-├── absensi.db                       ← Database SQLite (auto-dibuat)
-└── view/
-    ├── view_login.py                ← Halaman login
-    ├── view_mahasiswa_dashboard.py  ← Dashboard mahasiswa
-    └── view_dosen_dashboard.py      ← Dashboard dosen
-```
-
----
-
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### 1. Install Python (≥ 3.8)
 Tkinter sudah termasuk bawaan Python. Tidak ada dependensi tambahan.
@@ -32,3 +17,28 @@ python main.py
 ```
 
 ---
+
+## Screenshot Hasil
+### Tampilan Login
+![Login](img/login.png)
+<br>
+### Tampilan Logout
+![Logout](img/logout.png)
+<br>
+### Tampilan Dashboard Dosen
+![Dashboard Dosen](img/dosen.png)
+<br>
+![Rekap Absensi](img/rekapabsensidosen.png)
+<br>
+![Data Mahasiswa](img/datamahasiswadosen.png)
+<br>
+![Profil Dosen](img/profildosen.png)
+<br>
+### Tampilan Dashboard Mahasiswa
+![Dashboard Mahasiswa](img/mahasiswa.png)
+<br>
+![Absensi Hari ini](img/absenmahasiswa.png)
+<br>
+![Riwayat Absensi](img/riwayatabsenmahasiswa.png)
+<br>
+![Profil Mahasiswa](img/profilmahasiswa.png)
