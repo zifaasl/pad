@@ -1,43 +1,44 @@
-# SiAbsen – Sistem Informasi Absensi Akademik
+# Absensi
 
-## Nama : Adilah Nazifah Salamah
-## NIM : 23250018
+**Nama :** Adilah Nazifah Salamah  
+**NIM :** 23250018  
 
 ---
 
 ## Cara Menjalankan
 
-### 1. Install Python (≥ 3.8)
-Tkinter sudah termasuk bawaan Python. Tidak ada dependensi tambahan.
-
-### 2. Jalankan aplikasi
 ```bash
 python main.py
 ```
 
 ---
 
-## Screenshot Hasil
-### Tampilan Login
+## Dokumentasi Absensi
+
+### Login
+
 ![Login](img/login.png)
+
 <br>
-### Tampilan Logout
-![Logout](img/logout.png)
+
+### Dashboard Dosen
+
+![Dashboard Dosen](img/dashboarddosen.png)
+
 <br>
-### Tampilan Dashboard Dosen
-![Dashboard Dosen](img/dosen.png)
+
+![Monitoring Absensi](img/monitoringdosen.png)
+
 <br>
-![Rekap Absensi](img/rekapabsensidosen.png)
+
+![Laporan Absensi](img/laporandosen.png)
+
 <br>
-![Data Mahasiswa](img/datamahasiswadosen.png)
+
+### Dashboard Mahasiswa
+
+![Dashboard Mahasiswa](img/dashboarmahasiswa.png)
+
 <br>
-![Profil Dosen](img/profildosen.png)
-<br>
-### Tampilan Dashboard Mahasiswa
-![Dashboard Mahasiswa](img/mahasiswa.png)
-<br>
-![Absensi Hari ini](img/absenmahasiswa.png)
-<br>
-![Riwayat Absensi](img/riwayatabsenmahasiswa.png)
-<br>
-![Profil Mahasiswa](img/profilmahasiswa.png)
+
+![Riwayat Absensi](img/riwayatabsensimahasiswa.png)
